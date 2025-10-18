@@ -1,8 +1,9 @@
 (function () {
   const heroCarousel = document.querySelector('.hero-carousel');
-  if (heroCarousel) {
+  const dotsContainer = document.querySelector('.hero-dots');
+
+  if (heroCarousel && dotsContainer) {
     const slides = Array.from(heroCarousel.querySelectorAll('.hero-slide'));
-    const dotsContainer = document.querySelector('.hero-dots');
     const interval = Number(heroCarousel.dataset.interval) || 7000;
     let current = 0;
     let timer;
@@ -12,11 +13,13 @@
         slide.classList.toggle('is-active', i === index);
         slide.setAttribute('aria-hidden', i === index ? 'false' : 'true');
       });
+
       const dots = Array.from(dotsContainer.children);
       dots.forEach((dot, i) => {
         dot.classList.toggle('is-active', i === index);
         dot.setAttribute('aria-selected', i === index ? 'true' : 'false');
       });
+
       current = index;
     }
 
@@ -35,7 +38,7 @@
       }
     }
 
-    slides.forEach((_, index) => {
+    slides.forEach((slide, index) => {
       const dot = document.createElement('button');
       dot.className = 'hero-dot' + (index === 0 ? ' is-active' : '');
       dot.type = 'button';
@@ -49,7 +52,7 @@
       dot.addEventListener('mouseenter', stopTimer);
       dot.addEventListener('mouseleave', startTimer);
       dotsContainer.appendChild(dot);
-      slides[index].id = `hero-slide-${index}`;
+      slide.id = `hero-slide-${index}`;
     });
 
     heroCarousel.addEventListener('mouseenter', stopTimer);
@@ -65,8 +68,9 @@
     button.addEventListener('click', () => {
       const targetId = button.dataset.target;
       tabButtons.forEach((btn) => {
-        btn.classList.toggle('is-active', btn === button);
-        btn.setAttribute('aria-selected', btn === button ? 'true' : 'false');
+        const isActive = btn === button;
+        btn.classList.toggle('is-active', isActive);
+        btn.setAttribute('aria-selected', isActive ? 'true' : 'false');
       });
 
       panels.forEach((panel) => {
@@ -122,6 +126,12 @@
   const editToggle = document.getElementById('editToggle');
   if (editToggle) {
     const editableNodes = Array.from(document.querySelectorAll('[data-editable]'));
+    const SESSION_KEY = 'rongte-editing-access';
+    const passcode = editToggle.dataset.passcode || '';
+    const label = editToggle.querySelector('.edit-toggle__label') || editToggle;
+    const linkNodes = editableNodes.filter((node) => node.matches('a'));
+    let editing = false;
+    let authorized = sessionStorage.getItem(SESSION_KEY) === 'true';
 
     function applyEditableAttributes(node) {
       if (node.matches('a')) {
@@ -132,6 +142,14 @@
 
     editableNodes.forEach(applyEditableAttributes);
 
+    function guardLink(event) {
+      if (editing) {
+        event.preventDefault();
+      }
+    }
+
+    linkNodes.forEach((link) => link.addEventListener('click', guardLink));
+
     function setEditingMode(isEditing) {
       document.body.classList.toggle('is-editing', isEditing);
       editableNodes.forEach((node) => {
@@ -141,11 +159,41 @@
         }
       });
       editToggle.setAttribute('aria-pressed', isEditing ? 'true' : 'false');
-      editToggle.textContent = isEditing ? '退出编辑模式' : '开启编辑模式';
+      label.textContent = isEditing ? '退出编辑模式' : '开启编辑模式';
     }
 
-    let editing = false;
+    function requestAuthorization() {
+      if (!passcode) {
+        return true;
+      }
+
+      if (authorized) {
+        return true;
+      }
+
+      const input = window.prompt('请输入编辑密码以开启编辑模式');
+      if (input === null) {
+        return false;
+      }
+
+      if (input === passcode) {
+        authorized = true;
+        sessionStorage.setItem(SESSION_KEY, 'true');
+        return true;
+      }
+
+      window.alert('密码错误，请重试。');
+      return false;
+    }
+
     editToggle.addEventListener('click', () => {
+      if (!editing) {
+        const canEdit = requestAuthorization();
+        if (!canEdit) {
+          return;
+        }
+      }
+
       editing = !editing;
       setEditingMode(editing);
     });
