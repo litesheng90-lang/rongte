@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>荣特电子 | 数据线解决方案</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-bar">
+      <div class="brand" data-editable>荣特电子</div>
+      <nav class="main-nav" aria-label="主要导航">
+        <a href="#about" data-editable>公司简介</a>
+        <a href="#advantages" data-editable>核心优势</a>
+        <a href="#products" data-editable>产品中心</a>
+        <a href="#process" data-editable>定制流程</a>
+        <a href="#contact" data-editable>联系我们</a>
+      </nav>
+      <button class="edit-toggle" type="button" id="editToggle" aria-pressed="false" title="点击后直接在页面修改带虚线框的文字内容">
+        开启编辑模式
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="about">
+      <div class="container">
+        <div class="hero-carousel" data-interval="6000">
+          <div class="hero-slide is-active" data-type="text">
+            <div class="hero-media">
+              <img src="assets/placeholder-product.svg" alt="工厂图片" />
+            </div>
+            <div class="hero-content">
+              <span class="hero-eyebrow" data-editable>制造 · 研发 · 出口</span>
+              <h1 data-editable>专业数据线制造商</h1>
+              <p data-editable>
+                荣特电子专注于数据线的研发、生产与定制服务，拥有完整的质量管理体系和自动化生产线，可为全球客户提供稳定可靠的连接解决方案。
+              </p>
+              <ul class="hero-badges" aria-label="关键优势">
+                <li data-editable>20,000㎡ 自有厂房</li>
+                <li data-editable>PD/QC 快充全协议</li>
+                <li data-editable>支持 OEM / ODM</li>
+              </ul>
+              <div class="hero-actions">
+                <a class="button primary" href="#products" data-editable>查看产品目录</a>
+                <a class="button ghost" href="#contact" data-editable>获取定制报价</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-slide" data-type="video">
+            <div class="hero-media">
+              <video controls preload="metadata" poster="assets/placeholder-product.svg">
+                <source src="" type="video/mp4" />
+                您的浏览器不支持视频播放。
+              </video>
+            </div>
+            <div class="hero-content">
+              <h2 data-editable>了解我们的生产实力</h2>
+              <p data-editable>将您的工厂宣传片链接填写在此视频中，展示自动化生产线、实验室测试与包装流程。</p>
+            </div>
+          </div>
+
+          <div class="hero-slide" data-type="banner">
+            <div class="hero-media">
+              <img src="assets/placeholder-product.svg" alt="促销活动海报" />
+            </div>
+            <div class="hero-content">
+              <h2 data-editable>OEM/ODM 一站式服务</h2>
+              <p data-editable>支持快速打样、小批量试产与大货交付，满足不同渠道商的定制需求。</p>
+            </div>
+          </div>
+        </div>
+        <div class="hero-dots" role="tablist" aria-label="简介轮播"></div>
+      </div>
+    </section>
+
+    <section class="highlights" id="advantages">
+      <div class="container">
+        <div class="section-header">
+          <h2 data-editable>核心优势</h2>
+          <p data-editable>依托东莞自有工厂，提供快速响应、稳定品质与专业定制服务，为品牌商与渠道伙伴打造高附加值的连接产品。</p>
+        </div>
+        <div class="highlight-grid">
+          <article class="highlight-card">
+            <span class="highlight-icon" aria-hidden="true">🏭</span>
+            <h3 data-editable>规模化产线</h3>
+            <p data-editable>20+ 条自动裁线、焊接与组装产线，单日可交付 50K+ 成品，满足旺季出货需求。</p>
+          </article>
+          <article class="highlight-card">
+            <span class="highlight-icon" aria-hidden="true">🛠️</span>
+            <h3 data-editable>柔性定制</h3>
+            <p data-editable>线材、芯片、接头外壳、包装均可按需调整，提供工程样品与认证资料支持。</p>
+          </article>
+          <article class="highlight-card">
+            <span class="highlight-icon" aria-hidden="true">🔒</span>
+            <h3 data-editable>全流程品控</h3>
+            <p data-editable>通过 UL、CE、FCC、RoHS 等多项认证，配备拉力、插拔、老化等实验室测试。</p>
+          </article>
+          <article class="highlight-card">
+            <span class="highlight-icon" aria-hidden="true">⏱️</span>
+            <h3 data-editable>交期可靠</h3>
+            <p data-editable>标准款 7 天交货，定制款 15~20 天交付，配合 ERP 系统实时掌握进度。</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="products" id="products">
+      <div class="container">
+        <div class="section-header">
+          <h2 data-editable>产品中心</h2>
+          <p data-editable>支持多种接口组合，可按需定制长度、材质、颜色、芯片方案等规格。</p>
+        </div>
+
+        <div class="category-tabs" role="tablist" aria-label="产品分类">
+          <button class="tab-button is-active" role="tab" aria-selected="true" data-target="category-3in1" data-editable>3 in 1 多合一</button>
+          <button class="tab-button" role="tab" aria-selected="false" data-target="category-usb-c" data-editable>USB to Type-C</button>
+          <button class="tab-button" role="tab" aria-selected="false" data-target="category-c-c" data-editable>Type-C to Type-C</button>
+          <button class="tab-button" role="tab" aria-selected="false" data-target="category-special" data-editable>特色定制</button>
+        </div>
+
+        <div class="category-panel is-active" id="category-3in1" role="tabpanel">
+          <div class="product-grid">
+            <article class="product-card" data-interval="4000">
+              <div class="product-media" aria-label="3in1 金属编织线图片轮播">
+                <img src="assets/placeholder-product.svg" alt="3in1 金属编织线 - 图片 1" />
+                <img src="assets/placeholder-product.svg" alt="3in1 金属编织线 - 图片 2" />
+                <img src="assets/placeholder-product.svg" alt="3in1 金属编织线 - 图片 3" />
+              </div>
+              <div class="product-info">
+                <h3 data-editable>3in1 金属编织线</h3>
+                <ul data-editable>
+                  <li>Lightning / Type-C / Micro USB 同时输出</li>
+                  <li>5A 大电流快充芯片</li>
+                  <li>铝合金接头 + 300D 纤维编织外被</li>
+                  <li>可选长度：1m / 1.5m / 2m</li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="product-card" data-interval="5000">
+              <div class="product-media" aria-label="3in1 伸缩线图片轮播">
+                <img src="assets/placeholder-product.svg" alt="3in1 伸缩线 - 图片 1" />
+                <img src="assets/placeholder-product.svg" alt="3in1 伸缩线 - 图片 2" />
+              </div>
+              <div class="product-info">
+                <h3 data-editable>3in1 便携伸缩线</h3>
+                <ul data-editable>
+                  <li>ABS 外壳配合阻尼齿轮结构</li>
+                  <li>5 段卡位拉伸，最长 1.2m</li>
+                  <li>支持 3A 快充与数据同步</li>
+                  <li>可定制 LOGO 与颜色</li>
+                </ul>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <div class="category-panel" id="category-usb-c" role="tabpanel" hidden>
+          <div class="product-grid">
+            <article class="product-card" data-interval="4500">
+              <div class="product-media" aria-label="USB to Type-C 快充线图片轮播">
+                <img src="assets/placeholder-product.svg" alt="USB to Type-C 快充线 - 图片 1" />
+                <img src="assets/placeholder-product.svg" alt="USB to Type-C 快充线 - 图片 2" />
+              </div>
+              <div class="product-info">
+                <h3 data-editable>USB-A to Type-C 65W</h3>
+                <ul data-editable>
+                  <li>E-marker 智能识别芯片</li>
+                  <li>纯铜线芯 + 双层屏蔽</li>
+                  <li>支持 QC/PD 快充协议</li>
+                  <li>环保 TPE 外被</li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="product-card">
+              <div class="product-media" aria-label="USB to Type-C 数据线图片">
+                <img src="assets/placeholder-product.svg" alt="USB to Type-C 数据线" />
+              </div>
+              <div class="product-info">
+                <h3 data-editable>USB-A to Type-C 织带款</h3>
+                <ul data-editable>
+                  <li>彩色尼龙编织外被</li>
+                  <li>镀镍外壳，耐插拔测试 5000 次+</li>
+                  <li>数据传输 480Mbps</li>
+                  <li>MOQ 支持小批量定制</li>
+                </ul>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <div class="category-panel" id="category-c-c" role="tabpanel" hidden>
+          <div class="product-grid">
+            <article class="product-card" data-interval="5000">
+              <div class="product-media" aria-label="Type-C to Type-C 100W 图片轮播">
+                <img src="assets/placeholder-product.svg" alt="Type-C to Type-C 100W - 图片 1" />
+                <img src="assets/placeholder-product.svg" alt="Type-C to Type-C 100W - 图片 2" />
+              </div>
+              <div class="product-info">
+                <h3 data-editable>Type-C to Type-C 100W</h3>
+                <ul data-editable>
+                  <li>PD3.1 100W/5A 大功率快充</li>
+                  <li>内置智能 E-marker 芯片</li>
+                  <li>支持 4K@60Hz 视频输出</li>
+                  <li>液态硅胶或尼龙编织可选</li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="product-card">
+              <div class="product-media" aria-label="Type-C to Type-C 便携款图片">
+                <img src="assets/placeholder-product.svg" alt="Type-C to Type-C 便携款" />
+              </div>
+              <div class="product-info">
+                <h3 data-editable>Type-C to Type-C 迷你短线</h3>
+                <ul data-editable>
+                  <li>15cm 便携长度，适合移动电源</li>
+                  <li>双面快速充电与数据同步</li>
+                  <li>柔韧 SR 设计，抗弯折</li>
+                  <li>支持定制包装</li>
+                </ul>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <div class="category-panel" id="category-special" role="tabpanel" hidden>
+          <div class="product-grid">
+            <article class="product-card" data-interval="4500">
+              <div class="product-media" aria-label="磁吸数据线图片轮播">
+                <img src="assets/placeholder-product.svg" alt="磁吸数据线 - 图片 1" />
+                <img src="assets/placeholder-product.svg" alt="磁吸数据线 - 图片 2" />
+              </div>
+              <div class="product-info">
+                <h3 data-editable>磁吸快充数据线</h3>
+                <ul data-editable>
+                  <li>磁吸可替换接头，三合一设计</li>
+                  <li>360° 自由旋转，防缠绕</li>
+                  <li>LED 指示灯，可夜间操作</li>
+                  <li>支持多平台渠道合作</li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="product-card">
+              <div class="product-media" aria-label="车载数据线图片">
+                <img src="assets/placeholder-product.svg" alt="车载数据线" />
+              </div>
+              <div class="product-info">
+                <h3 data-editable>车载弹簧线</h3>
+                <ul data-editable>
+                  <li>高弹 PU 线材，拉伸自如</li>
+                  <li>可选 Lightning / Type-C 接口</li>
+                  <li>车载支架配套供应</li>
+                  <li>通过 CE/FCC/RoHS 认证</li>
+                </ul>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="process" id="process">
+      <div class="container">
+        <div class="section-header">
+          <h2 data-editable>定制合作流程</h2>
+          <p data-editable>从需求沟通到批量交付，全程由专属项目经理跟进，保障品质与时效。</p>
+        </div>
+        <ol class="process-steps">
+          <li class="process-step">
+            <span class="step-index">01</span>
+            <div class="step-body">
+              <h3 data-editable>需求确认</h3>
+              <p data-editable>沟通接口方案、使用场景、外观材质、目标价格及认证要求，提供解决方案建议。</p>
+            </div>
+          </li>
+          <li class="process-step">
+            <span class="step-index">02</span>
+            <div class="step-body">
+              <h3 data-editable>样品打样</h3>
+              <p data-editable>3~5 天内完成样品组装与可靠性测试，寄送样品并反馈参数报告。</p>
+            </div>
+          </li>
+          <li class="process-step">
+            <span class="step-index">03</span>
+            <div class="step-body">
+              <h3 data-editable>下单生产</h3>
+              <p data-editable>确认物料及排产计划，启动自动化生产与过程质量检验，支持客户验厂。</p>
+            </div>
+          </li>
+          <li class="process-step">
+            <span class="step-index">04</span>
+            <div class="step-body">
+              <h3 data-editable>终检包装</h3>
+              <p data-editable>成品全检、抽检老化，按客户要求包装贴标，可提供中英文说明书设计。</p>
+            </div>
+          </li>
+          <li class="process-step">
+            <span class="step-index">05</span>
+            <div class="step-body">
+              <h3 data-editable>物流交付</h3>
+              <p data-editable>协助安排国内快递、国际空运或海运，支持第三方仓储及跨境电商直发。</p>
+            </div>
+          </li>
+        </ol>
+        <div class="process-cta">
+          <h3 data-editable>想快速启动您的新品项目？</h3>
+          <p data-editable>联系我们的项目经理，获取一份专属的打样与生产计划。</p>
+          <a class="button primary" href="mailto:sales@rongtecable.com" data-editable>发送邮件咨询</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" id="contact">
+    <div class="container footer-grid">
+      <div class="footer-about">
+        <h2 data-editable>联系我们</h2>
+        <p data-editable>地址：广东省东莞市XXX工业区XX号</p>
+        <p data-editable>电话：+86 138 0000 0000</p>
+        <p data-editable>邮箱：sales@rongtecable.com</p>
+      </div>
+      <div class="footer-qr">
+        <div class="qr-item">
+          <img src="assets/placeholder-qr.svg" alt="微信二维码" />
+          <span data-editable>微信二维码</span>
+        </div>
+        <div class="qr-item">
+          <img src="assets/placeholder-qr.svg" alt="阿里巴巴店铺二维码" />
+          <span data-editable>1688 店铺二维码</span>
+        </div>
+      </div>
+      <div class="footer-social">
+        <h3 data-editable>官方账号</h3>
+        <ul>
+          <li>
+            <a href="https://weixin.qq.com/" target="_blank" rel="noopener" aria-label="微信" data-editable>
+              <span class="icon wechat" aria-hidden="true"></span>微信
+            </a>
+          </li>
+          <li>
+            <a href="https://www.douyin.com/" target="_blank" rel="noopener" aria-label="抖音" data-editable>
+              <span class="icon douyin" aria-hidden="true"></span>抖音
+            </a>
+          </li>
+          <li>
+            <a href="https://www.xiaohongshu.com/" target="_blank" rel="noopener" aria-label="小红书" data-editable>
+              <span class="icon xiaohongshu" aria-hidden="true"></span>小红书
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p data-editable>© <span id="year"></span> 荣特电子科技有限公司 版权所有</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
