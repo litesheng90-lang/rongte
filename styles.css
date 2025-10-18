@@ -120,27 +120,6 @@ video {
   transform: translateY(-2px);
 }
 
-.edit-toggle {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  border: 1px solid rgba(255, 255, 255, 0.32);
-  color: var(--color-ink-primary);
-  background: transparent;
-  border-radius: 999px;
-  padding: 10px 18px;
-  font-size: 0.9rem;
-  font-weight: 500;
-  cursor: pointer;
-  transition: background 0.3s ease, border-color 0.3s ease;
-}
-
-.edit-toggle:hover,
-.edit-toggle:focus {
-  background: rgba(255, 255, 255, 0.12);
-  border-color: rgba(255, 255, 255, 0.48);
-}
-
 .button {
   display: inline-flex;
   align-items: center;
@@ -664,26 +643,6 @@ video {
   padding: 24px 32px 0;
   text-align: center;
   color: var(--color-ink-muted);
-}
-
-body.is-editing {
-  cursor: text;
-}
-
-body.is-editing [data-editable] {
-  outline: 1px dashed rgba(42, 139, 255, 0.8);
-  outline-offset: 2px;
-  background: rgba(42, 139, 255, 0.08);
-  transition: background 0.3s ease;
-}
-
-body.is-editing a {
-  pointer-events: auto;
-}
-
-[data-editable][contenteditable="true"]:focus {
-  background: rgba(42, 139, 255, 0.16);
-  outline: 2px solid rgba(42, 139, 255, 0.8);
 }
 
 @media (max-width: 1080px) {
