@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="300" viewBox="0 0 300 300">
+  <rect width="300" height="300" fill="#f4f4f4" rx="16"/>
+  <rect x="40" y="40" width="220" height="220" fill="none" stroke="#1d1d1f" stroke-width="6" stroke-dasharray="16 12"/>
+  <text x="50%" y="45%" font-family="Arial, sans-serif" font-size="28" fill="#1d1d1f" text-anchor="middle">二维码</text>
+  <text x="50%" y="60%" font-family="Arial, sans-serif" font-size="18" fill="#555555" text-anchor="middle">替换为实际图片</text>
+</svg>
